@@ -1,6 +1,6 @@
-# Final Project - *CarRescue App*
+# Final Project - *Car Rescue App*
 
-**CarRescue App** is a basic twitter app to .
+**Car Rescue App** is a basic twitter app to .
 ## User Stories
 https://github.com/coderschoolGroup2/CarRescue/blob/master/user%20Stories/fixit.pdf
 ## wireframe
