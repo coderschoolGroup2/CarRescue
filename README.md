@@ -2,14 +2,14 @@
 
 **FixIt App** is a basic twitter app to .
 ## User Stories
-
+https://github.com/coderschoolGroup2/CarRescue/blob/master/user%20Stories/fixit.pdf
 ## wireframe
-
+https://github.com/coderschoolGroup2/CarRescue/tree/master/Wireframe%20Screen
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='' width='' alt='Video Walkthrough' />
+<img src='https://github.com/coderschoolGroup2/CarRescue/blob/master/user%20Stories/prototype.gif' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
