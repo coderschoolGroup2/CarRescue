@@ -1,6 +1,6 @@
-# Final Project - *FixIt App*
+# Final Project - *CarRescue App*
 
-**FixIt App** is a basic twitter app to .
+**CarRescue App** is a basic twitter app to .
 ## User Stories
 https://github.com/coderschoolGroup2/CarRescue/blob/master/user%20Stories/fixit.pdf
 ## wireframe
