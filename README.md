@@ -94,7 +94,7 @@ Here's a high level prototype using the few screen and represent the user storie
 
 <img src='https://github.com/coderschoolGroup2/CarRescue/blob/master/user%20Stories/prototype.gif' width='' alt='Video Walkthrough' />
 
-Wireframe usign Balsamiq and prototype using Principle
+Wireframe using Balsamiq and prototype using Principle
 
 ## Notes
 
