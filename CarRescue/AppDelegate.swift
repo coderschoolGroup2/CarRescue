@@ -27,17 +27,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Parse.initializeWithConfiguration(configuration)
         let containerViewController = UIStoryboard.ContainerController()
         
-       window?.rootViewController = containerViewController
-        
-        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 320, height: 44))
-        containerViewController!.view.addSubview(navBar);
-        let navItem = UINavigationItem(title: "SomeTitle");
-        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "selector");
-        navItem.rightBarButtonItem = doneItem;
-        navBar.setItems([navItem], animated: false);
-        
         containerViewController!.menuViewController = UIStoryboard.MenuLogoutController()
         containerViewController!.currentViewController = UIStoryboard.MapController()
+
+        
+       //window?.rootViewController = containerViewController
+        
+//        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 320, height: 44))
+//        containerViewController!.view.addSubview(navBar);
+//        let navItem = UINavigationItem(title: "SomeTitle");
+//        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "selector");
+//        navItem.rightBarButtonItem = doneItem;
+//        navBar.setItems([navItem], animated: false);
+        
         
         //menuViewController.containerViewController = vc
         return true
