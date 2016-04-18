@@ -22,9 +22,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Initialize Parse.
             let configuration = ParseClientConfiguration {
                 $0.applicationId = "u4VziidX73RcMp7RFfL5MKC6vXK86fsZKXTLVdkS"
-                $0.clientKey = "te92Tk0r7IVP2hwxiVopPg56SQzYRqANQMxUI7Uv"
+                $0.clientKey = "te92Tk0r7IVP2hwxiVopPg56SQzYRqANQMxUI7U"
             }
             Parse.initializeWithConfiguration(configuration)
+        let containerViewController = UIStoryboard.ContainerController()
+        
+       window?.rootViewController = containerViewController
+        
+        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 320, height: 44))
+        containerViewController!.view.addSubview(navBar);
+        let navItem = UINavigationItem(title: "SomeTitle");
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "selector");
+        navItem.rightBarButtonItem = doneItem;
+        navBar.setItems([navItem], animated: false);
+        
+        containerViewController!.menuViewController = UIStoryboard.MenuLogoutController()
+        containerViewController!.currentViewController = UIStoryboard.MapController()
+        
+        //menuViewController.containerViewController = vc
         return true
     }
 
@@ -52,4 +67,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+
+extension UIStoryboard {
+    class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
+    
+    class func ContainerController() -> ContainerViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("ContainerViewController") as? ContainerViewController
+    }
+
+    
+    class func MenuLoginController() -> SliderMenuLoginViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("SliderMenuLoginViewController") as? SliderMenuLoginViewController
+    }
+    
+    class func MenuLogoutController() -> SliderMenuLogoutViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("SliderMenuLogoutViewController") as? SliderMenuLogoutViewController
+    }
+    
+    class func MapController() -> MapViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("MapViewController") as? MapViewController
+    }
+    
+}
+
+
 
