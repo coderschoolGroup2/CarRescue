@@ -12,6 +12,7 @@
 		12CAB60A1CC270EC006DA118 /* SliderMenuLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CAB6091CC270EC006DA118 /* SliderMenuLoginViewController.swift */; };
 		12CAB60C1CC27100006DA118 /* SliderMenuLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CAB60B1CC27100006DA118 /* SliderMenuLogoutViewController.swift */; };
 		12CAB60E1CC2994D006DA118 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CAB60D1CC2994D006DA118 /* ContainerViewController.swift */; };
+		12CCC9AC1CC65EDE0046228D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CCC9AB1CC65EDE0046228D /* CoreLocation.framework */; };
 		1F46944165039E385D8DC204 /* Pods_CarRescue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99260FF58F74AE223002B5EF /* Pods_CarRescue.framework */; };
 		E0FC687E1CB4A87700A1BD7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FC687D1CB4A87700A1BD7A /* AppDelegate.swift */; };
 		E0FC68831CB4A87700A1BD7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FC68811CB4A87700A1BD7A /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		12CAB6091CC270EC006DA118 /* SliderMenuLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderMenuLoginViewController.swift; sourceTree = "<group>"; };
 		12CAB60B1CC27100006DA118 /* SliderMenuLogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderMenuLogoutViewController.swift; sourceTree = "<group>"; };
 		12CAB60D1CC2994D006DA118 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		12CCC9AB1CC65EDE0046228D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		42911DEF67CE2E883A3F8F4F /* Pods-CarRescue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRescue.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarRescue/Pods-CarRescue.release.xcconfig"; sourceTree = "<group>"; };
 		99260FF58F74AE223002B5EF /* Pods_CarRescue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRescue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FC687A1CB4A87700A1BD7A /* CarRescue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRescue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12CCC9AC1CC65EDE0046228D /* CoreLocation.framework in Frameworks */,
 				12CAB6061CC14055006DA118 /* MapKit.framework in Frameworks */,
 				1F46944165039E385D8DC204 /* Pods_CarRescue.framework in Frameworks */,
 			);
@@ -70,6 +73,7 @@
 		5F8A00278B557D648E4B4C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				12CCC9AB1CC65EDE0046228D /* CoreLocation.framework */,
 				12CAB6051CC14055006DA118 /* MapKit.framework */,
 				99260FF58F74AE223002B5EF /* Pods_CarRescue.framework */,
 			);
