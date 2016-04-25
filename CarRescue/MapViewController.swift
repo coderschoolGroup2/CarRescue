@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate,UIGestureRecognizerDelegate  {
     
     @IBOutlet weak var mapView: MKMapView!
     var locationManager : CLLocationManager = CLLocationManager()
@@ -18,21 +18,78 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor.blueColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
-        //mapView.delegate = self
-
-        
         // set current location
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+
+        let gestureRecognizer = UILongPressGestureRecognizer(target: self, action:"handleTap:")
+        gestureRecognizer.delegate = self
+        mapView.addGestureRecognizer(gestureRecognizer)
+
         
     }
-       
+    
+    func handleTap(gestureReconizer: UILongPressGestureRecognizer) {
+        
+        let location = gestureReconizer.locationInView(mapView)
+        let coordinate = mapView.convertPoint(location,toCoordinateFromView: mapView)
+        
+        // Add annotation:
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        annotation.title = "new location"
+        mapView.addAnnotation(annotation)
+        
+        
+        let request = MKDirectionsRequest()
+        
+        request.source = MKMapItem.mapItemForCurrentLocation()
+        let pm = MKPlacemark(coordinate: CLLocationCoordinate2DMake(coordinate.latitude, coordinate.longitude), addressDictionary: nil)
+        request.destination = MKMapItem(placemark: pm)
+        request.requestsAlternateRoutes = false
+        
+        let directions = MKDirections(request: request)
+        
+        directions.calculateDirectionsWithCompletionHandler { (response:MKDirectionsResponse?, error:NSError?) -> Void in
+            
+            if error != nil {
+                // Handle error
+            } else {
+                self.showRoute(response!)
+            }
+
+        }
+        
+        
+        let VC1 = self.storyboard!.instantiateViewControllerWithIdentifier("CreateNewLocationViewController") as! CreateNewLocationViewController
+        let navController = UINavigationController(rootViewController: VC1)
+        self.presentViewController(navController, animated:true, completion: nil)
+    }
+    
+    func showRoute(response: MKDirectionsResponse) {
+        
+        for route in response.routes {
+            
+            mapView.addOverlay(route.polyline,
+                level: MKOverlayLevel.AboveRoads)
+        }
+    }
+
+    @IBAction func onAddNewLocationTapped(sender: AnyObject) {
+        //let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        let VC1 = self.storyboard!.instantiateViewControllerWithIdentifier("CreateNewLocationViewController") as! CreateNewLocationViewController
+        let navController = UINavigationController(rootViewController: VC1)
+        self.presentViewController(navController, animated:true, completion: nil)
+    }
+    
+    @IBAction func onTapped(sender: UITapGestureRecognizer) {
+        
+    }
+    
+    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         
@@ -49,4 +106,5 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     {
         print("Errors: " + error.localizedDescription)
     }
-}
+    
+   }

@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		129F377B1CCC561700CEFB25 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F377A1CCC561700CEFB25 /* LoginViewController.swift */; };
+		129F377D1CCC563F00CEFB25 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F377C1CCC563F00CEFB25 /* RegisterViewController.swift */; };
+		12C97F2C1CC7A8D700334CCD /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C97F2B1CC7A8D700334CCD /* Events.swift */; };
+		12C97F301CC7A8F900334CCD /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C97F2F1CC7A8F900334CCD /* Stores.swift */; };
+		12C97F341CC7AB8F00334CCD /* Favorite_location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C97F331CC7AB8F00334CCD /* Favorite_location.swift */; };
+		12C97F361CC7ABC700334CCD /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C97F351CC7ABC700334CCD /* Users.swift */; };
 		12CAB6041CC13F89006DA118 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CAB6031CC13F89006DA118 /* MapViewController.swift */; };
 		12CAB6061CC14055006DA118 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CAB6051CC14055006DA118 /* MapKit.framework */; };
 		12CAB60A1CC270EC006DA118 /* SliderMenuLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CAB6091CC270EC006DA118 /* SliderMenuLoginViewController.swift */; };
 		12CAB60C1CC27100006DA118 /* SliderMenuLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CAB60B1CC27100006DA118 /* SliderMenuLogoutViewController.swift */; };
 		12CAB60E1CC2994D006DA118 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CAB60D1CC2994D006DA118 /* ContainerViewController.swift */; };
+		12CAFD381CC7B26000257925 /* CreateNewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CAFD371CC7B26000257925 /* CreateNewLocationViewController.swift */; };
+		12CAFD3A1CC7B27900257925 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CAFD391CC7B27900257925 /* LocationDetailViewController.swift */; };
 		12CCC9AC1CC65EDE0046228D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CCC9AB1CC65EDE0046228D /* CoreLocation.framework */; };
 		1F46944165039E385D8DC204 /* Pods_CarRescue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99260FF58F74AE223002B5EF /* Pods_CarRescue.framework */; };
 		E0FC687E1CB4A87700A1BD7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FC687D1CB4A87700A1BD7A /* AppDelegate.swift */; };
@@ -22,11 +30,19 @@
 
 /* Begin PBXFileReference section */
 		00B4EA1D83869FD9006E045D /* Pods-CarRescue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRescue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarRescue/Pods-CarRescue.debug.xcconfig"; sourceTree = "<group>"; };
+		129F377A1CCC561700CEFB25 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		129F377C1CCC563F00CEFB25 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		12C97F2B1CC7A8D700334CCD /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		12C97F2F1CC7A8F900334CCD /* Stores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
+		12C97F331CC7AB8F00334CCD /* Favorite_location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite_location.swift; sourceTree = "<group>"; };
+		12C97F351CC7ABC700334CCD /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		12CAB6031CC13F89006DA118 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		12CAB6051CC14055006DA118 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		12CAB6091CC270EC006DA118 /* SliderMenuLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderMenuLoginViewController.swift; sourceTree = "<group>"; };
 		12CAB60B1CC27100006DA118 /* SliderMenuLogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderMenuLogoutViewController.swift; sourceTree = "<group>"; };
 		12CAB60D1CC2994D006DA118 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		12CAFD371CC7B26000257925 /* CreateNewLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewLocationViewController.swift; sourceTree = "<group>"; };
+		12CAFD391CC7B27900257925 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		12CCC9AB1CC65EDE0046228D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		42911DEF67CE2E883A3F8F4F /* Pods-CarRescue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRescue.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarRescue/Pods-CarRescue.release.xcconfig"; sourceTree = "<group>"; };
 		99260FF58F74AE223002B5EF /* Pods_CarRescue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRescue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +75,10 @@
 				12CAB6091CC270EC006DA118 /* SliderMenuLoginViewController.swift */,
 				12CAB60B1CC27100006DA118 /* SliderMenuLogoutViewController.swift */,
 				12CAB60D1CC2994D006DA118 /* ContainerViewController.swift */,
+				12CAFD371CC7B26000257925 /* CreateNewLocationViewController.swift */,
+				12CAFD391CC7B27900257925 /* LocationDetailViewController.swift */,
+				129F377A1CCC561700CEFB25 /* LoginViewController.swift */,
+				129F377C1CCC563F00CEFB25 /* RegisterViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -66,6 +86,10 @@
 		12CAB6081CC270CB006DA118 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				12C97F2B1CC7A8D700334CCD /* Events.swift */,
+				12C97F2F1CC7A8F900334CCD /* Stores.swift */,
+				12C97F331CC7AB8F00334CCD /* Favorite_location.swift */,
+				12C97F351CC7ABC700334CCD /* Users.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -243,10 +267,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				129F377B1CCC561700CEFB25 /* LoginViewController.swift in Sources */,
 				12CAB60C1CC27100006DA118 /* SliderMenuLogoutViewController.swift in Sources */,
+				12C97F361CC7ABC700334CCD /* Users.swift in Sources */,
 				E0FC687E1CB4A87700A1BD7A /* AppDelegate.swift in Sources */,
+				12CAFD3A1CC7B27900257925 /* LocationDetailViewController.swift in Sources */,
 				12CAB60E1CC2994D006DA118 /* ContainerViewController.swift in Sources */,
+				12C97F341CC7AB8F00334CCD /* Favorite_location.swift in Sources */,
+				12C97F301CC7A8F900334CCD /* Stores.swift in Sources */,
+				12C97F2C1CC7A8D700334CCD /* Events.swift in Sources */,
 				12CAB60A1CC270EC006DA118 /* SliderMenuLoginViewController.swift in Sources */,
+				129F377D1CCC563F00CEFB25 /* RegisterViewController.swift in Sources */,
+				12CAFD381CC7B26000257925 /* CreateNewLocationViewController.swift in Sources */,
 				12CAB6041CC13F89006DA118 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

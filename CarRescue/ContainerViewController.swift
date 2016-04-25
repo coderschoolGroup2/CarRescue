@@ -19,7 +19,6 @@ class ContainerViewController: UIViewController {
     
     var menuViewController: UIViewController! {
         didSet(oldView) {
-            //ContentView.addSubview(currentViewController.view)
             self.view.layoutIfNeeded()
             
             if oldView != nil {
@@ -32,12 +31,13 @@ class ContainerViewController: UIViewController {
             menuView.addSubview(menuViewController.view)
             menuViewController.didMoveToParentViewController(self)
             
-            menuViewController.view.frame = CGRectMake(0, 0, menuView.frame.size.width, menuView.frame.size.height);
+            menuViewController.view.frame = CGRectMake(0, 50, menuView.frame.size.width, menuView.frame.size.height);
         }
     }
     
     var currentViewController :UIViewController! {
         didSet(oldView) {
+            
             //ContentView.addSubview(currentViewController.view)
             self.view.layoutIfNeeded()
             
@@ -52,13 +52,8 @@ class ContainerViewController: UIViewController {
             currentViewController.didMoveToParentViewController(self)
             
             currentViewController.view.frame = CGRectMake(0, 0, contentView.frame.size.width, contentView.frame.size.height);
-            
-            UIView.animateWithDuration(0.5) { () -> Void in
-                self.leftConstraint.constant = 0
-                self.view.layoutIfNeeded()
-                
-            }
         }
+
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -69,16 +64,51 @@ class ContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = UIColor.blueColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+
+      
         
     }
     
+    
+    func uicolorFromHex(rgbValue:UInt32)->UIColor{
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+        let blue = CGFloat(rgbValue & 0xFF)/256.0
+        
+        return UIColor(red:red, green:green, blue:blue, alpha:1.0)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        self.view.addSubview(navBar);
+        let navItem = UINavigationItem(title: "CarRescue");
+        let menuItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: nil, action: "onMenuTapped:");
+        navItem.leftBarButtonItem = menuItem;
+        
+        
+        let navBackgroundImage:UIImage! = UIImage(named: "images")
+        //navBar.setBackgroundImage(navBackgroundImage, forBarMetrics: .Default)
+        
+        navBar.barTintColor = UIColor.blueColor()
+        navBar.tintColor = UIColor.whiteColor()
+        
+
+        navBar.setItems([navItem], animated: false);
+    }
+    
     @IBAction func onMenuTapped(sender: UIBarButtonItem) {
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
-            self.leftConstraint.constant = self.view.frame.width - 60
-            self.view.layoutIfNeeded()
-        });
+        if self.leftConstraint.constant == 0 {
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.leftConstraint.constant = self.view.frame.width - 60
+                self.view.layoutIfNeeded()
+            });
+        } else {
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.leftConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            });
+        }
+        
     }
     
     @IBAction func onPanGesture(sender: UIPanGestureRecognizer) {
@@ -95,14 +125,16 @@ class ContainerViewController: UIViewController {
             
         } else if sender.state == .Ended {
             UIView.animateWithDuration(0.3, animations: { () -> Void in
-                if velocity.x < 0 {
+                if velocity.x > 0 {
+                    self.leftConstraint.constant = self.view.frame.width - 60
+                } else {
                     self.leftConstraint.constant = 0
                 }
                 self.view.layoutIfNeeded()
             })
             
+            
         }
-        
         
     }
 }

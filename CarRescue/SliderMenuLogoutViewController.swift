@@ -9,5 +9,20 @@
 import UIKit
 
 class SliderMenuLogoutViewController: UIViewController {
-
+    
+    var listViewController:[UIViewController] = [UIStoryboard.LoginController()!, UIStoryboard.SignUpController()!]
+    
+    var containerViewController:ContainerViewController!
+    
+    override func viewDidLoad() {
+        
+    }
+    @IBAction func SignUpTapped(sender: AnyObject) {
+        containerViewController.currentViewController = listViewController[0]
+    }
+    
+    @IBAction func onLogginTapped(sender: AnyObject) {
+         containerViewController.currentViewController = listViewController[0]
+    }
+    
 }

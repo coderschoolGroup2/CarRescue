@@ -27,26 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 $0.clientKey = "te92Tk0r7IVP2hwxiVopPg56SQzYRqANQMxUI7U"
             }
             Parse.initializeWithConfiguration(configuration)
-        let containerViewController = UIStoryboard.ContainerController()
+        let containerViewController = window?.rootViewController as! ContainerViewController
         
-        containerViewController!.menuViewController = UIStoryboard.MenuLogoutController()
-        containerViewController!.currentViewController = UIStoryboard.MapController()
+        //window?.rootViewController = containerViewController
 
+        let menulogout = UIStoryboard.MenuLogoutController()
+        containerViewController.menuViewController = menulogout
+        containerViewController.currentViewController = UIStoryboard.MapController()
+
+        menulogout!.containerViewController = containerViewController
         
-       window?.rootViewController = containerViewController
-        
-//        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 320, height: 44))
-//        containerViewController!.view.addSubview(navBar);
-//        let navItem = UINavigationItem(title: "SomeTitle");
-//        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "selector");
-//        navItem.rightBarButtonItem = doneItem;
-//        navBar.setItems([navItem], animated: false);
-        
-        
-        //menuViewController.containerViewController = vc
-        
-        //locationManager.requestAlwaysAuthorization()
-        //locationManager.startUpdatingLocation()
         return true
     }
 
@@ -94,6 +84,15 @@ extension UIStoryboard {
     
     class func MapController() -> MapViewController? {
         return mainStoryboard().instantiateViewControllerWithIdentifier("MapViewController") as? MapViewController
+    }
+    
+    
+    class func SignUpController() -> RegisterViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("RegisterViewController") as? RegisterViewController
+    }
+    
+    class func LoginController() -> LoginViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController
     }
     
 }
