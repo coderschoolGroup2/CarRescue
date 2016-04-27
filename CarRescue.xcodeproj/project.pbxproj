@@ -17,6 +17,7 @@
 		E0FC68831CB4A87700A1BD7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FC68811CB4A87700A1BD7A /* Main.storyboard */; };
 		E0FC68851CB4A87700A1BD7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0FC68841CB4A87700A1BD7A /* Assets.xcassets */; };
 		E0FC68881CB4A87700A1BD7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FC68861CB4A87700A1BD7A /* LaunchScreen.storyboard */; };
+		FEDF36E01CC6639500DC2323 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDF36DF1CC6639500DC2323 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E0FC68841CB4A87700A1BD7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0FC68871CB4A87700A1BD7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0FC68891CB4A87700A1BD7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEDF36DF1CC6639500DC2323 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEDF36E01CC6639500DC2323 /* CoreLocation.framework in Frameworks */,
 				12CAB6061CC14055006DA118 /* MapKit.framework in Frameworks */,
 				1F46944165039E385D8DC204 /* Pods_CarRescue.framework in Frameworks */,
 			);
@@ -70,6 +73,7 @@
 		5F8A00278B557D648E4B4C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEDF36DF1CC6639500DC2323 /* CoreLocation.framework */,
 				12CAB6051CC14055006DA118 /* MapKit.framework */,
 				99260FF58F74AE223002B5EF /* Pods_CarRescue.framework */,
 			);

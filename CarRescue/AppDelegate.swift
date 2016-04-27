@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import Bolts
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,21 +26,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 $0.clientKey = "te92Tk0r7IVP2hwxiVopPg56SQzYRqANQMxUI7U"
             }
             Parse.initializeWithConfiguration(configuration)
-        let containerViewController = UIStoryboard.ContainerController()
         
-        containerViewController!.menuViewController = UIStoryboard.MenuLogoutController()
-        containerViewController!.currentViewController = UIStoryboard.MapController()
+        var locationManager: CLLocationManager! = CLLocationManager()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
+//        let containerViewController = UIStoryboard.ContainerController()
+//        
+//        containerViewController!.menuViewController = UIStoryboard.MenuLogoutController()
+//        containerViewController!.currentViewController = UIStoryboard.MapController()
 
         
-       //window?.rootViewController = containerViewController
+      // window?.rootViewController = containerViewController
+   //    window?.rootViewController = mapViewController
         
-//        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 320, height: 44))
+        //let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 360, height: 44))
+//        let navBar: UINavigationBar = UINavigationBar()
 //        containerViewController!.view.addSubview(navBar);
 //        let navItem = UINavigationItem(title: "SomeTitle");
 //        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "selector");
 //        navItem.rightBarButtonItem = doneItem;
 //        navBar.setItems([navItem], animated: false);
-        
+//        
         
         //menuViewController.containerViewController = vc
         return true
